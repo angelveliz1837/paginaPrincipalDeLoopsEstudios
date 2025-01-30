@@ -2,10 +2,12 @@ body{
     top: 0;
     left: 0;
     font-family: "Josefin Sans", serif;
+    
 }
 
 .portada{
     background: url(./images/desktop/image-hero.jpg);
+    background-size: cover;
     width: 100%;
 }
 
@@ -16,7 +18,7 @@ body{
 
 .portada_navegador_menu{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 54% 46%;
     margin-left: 10.3em;
 
 }
@@ -36,13 +38,18 @@ body{
     color: white;
 }
 
+.portada_navegador_menu_items_item li:hover{
+    cursor: pointer;
+    border-bottom: 3px solid white;
+}
+
 .portada_cuadro{
     border: 1px solid white;
     color: white;
     display: inline-block;
     text-transform: uppercase;
     font-size: 4.5em;
-    margin: 1em 9.5em 1.7em 2.3em;
+    margin: 1em 9.5em 1.7em 2.5em;
     font-weight: 300;
     padding: 0.5em;
 }
@@ -81,6 +88,7 @@ body{
 .titulo{
     display: grid;
     grid-template-columns: 84% 16%;
+    grid-template-rows: auto auto;
     margin: 0em 10.5em 0em 10.5em;
 }
 
@@ -99,10 +107,17 @@ body{
     margin-right: 1.6em;
 }
 
+.titulo_boton:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
 .lista{
+    grid-column: span 2;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    margin: 0em 11em 0em 10em;
+    margin-left: -1em;
     padding: 2em 0em 5em 0em;
 }
 
@@ -110,6 +125,12 @@ body{
     margin: 1.1em;
     color: white;
     padding: 6% 0em;
+    background-size: cover;
+}
+
+.lista .lista_fondo:hover{
+    opacity: 0.2;
+    cursor: pointer;
 }
 
 .lista_deep{
@@ -128,6 +149,10 @@ body{
 
 .lista_grid{
     background: url(images/desktop/image-grid.jpg);
+}
+
+.opcional{
+    padding: 11em 5em 0em 1em !important;
 }
 
 .lista_above{
@@ -179,6 +204,12 @@ body{
     padding: 0em 0.7em;
 }
 
+.footer_base_redes_item img:hover{
+    cursor: pointer;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid white;
+}
+
 .footer_base_menu_items{
     padding: 0em;
 }
@@ -189,6 +220,11 @@ body{
     margin-left: -1.5em;
 }
 
+.footer_base_menu_items_item li:hover{
+    cursor: pointer;
+    border-bottom: 3px solid white;
+}
+
 .footer_base_copyright{
     align-content: center;
     text-align: end;
@@ -196,4 +232,181 @@ body{
     color: hsl(0, 0%, 41%);
 }
 
+@media screen and (max-width:375px) {
 
+    .portada{
+        background: url(images/mobile/image-hero.jpg);
+        background-size: cover;
+    }
+
+    .portada_navegador{
+        padding: 0em;
+    }
+
+    .portada_navegador_menu{
+        margin: 0em 1em;
+        padding: 2em 0em;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        
+    }
+
+    .portada_navegador_menu_logo img{
+        width: 9em;
+    }
+
+    .portada_navegador_menu_items{
+        content: url(images/icon-hamburger.svg);
+    }
+
+    .portada_cuadro{
+        margin: 2.5em 0.5em 5em 0.5em;
+        font-size: 2.5em;
+    }
+
+    .informacion{
+        padding: 3em 1em 1em 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .informacion_imagen{
+        content: url(images/mobile/image-interactive.jpg);
+    }
+
+    .informacion_texto{
+        margin: 0em;
+        padding: 3em 1em;
+        text-align: center;
+    }
+
+    .informacion_texto h1{
+        font-size: 2em;
+    }
+
+    .titulo{
+        margin: 0em 1em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo_texto{
+        order: 1;
+    }
+
+    .titulo_texto h1{
+        font-size: 2em;
+    }
+
+    .titulo .titulo_boton{
+        margin: 1em 6em 5em 6em;
+        padding: 0.5em 0em;
+    }
+
+    .titulo_boton{
+        order:3;
+    }
+
+    .lista{
+        order: 2;
+        margin: 0em;
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 2em 0em 0em 0em;
+    }
+
+    .lista_deep{
+        background: url(images/mobile/image-deep-earth.jpg);
+    }
+    
+    .lista_night{
+        background: url(images/mobile/image-night-arcade.jpg);
+    
+    }
+    
+    .lista_soccer{
+        background: url(images/mobile/image-soccer-team.jpg);
+    }
+    
+    .lista_grid{
+        background: url(images/mobile/image-grid.jpg);
+    }
+
+    .opcional{
+        padding: 1.5em 10em 0em 1em !important;
+    }
+    
+    .lista_above{
+        background: url(images/mobile/image-from-above.jpg);
+    }
+    
+    .lista_pocket{
+        background: url(images/mobile/image-pocket-borealis.jpg);
+    }
+    
+    .lista_curiosity{
+        background: url(images/mobile/image-curiosity.jpg);
+    }
+    
+    .lista_fisheye{
+        background: url(images/mobile/image-fisheye.jpg);
+    }
+
+    .lista_titulo{
+        padding: 1.5em 7em 0em 1em;
+        font-size: 1.5em;
+        text-align: start;
+    }
+
+    .lista .lista_fondo{
+        margin: 1.1em 0em;
+    }
+
+    .footer{
+        padding: 2em;
+        text-align: center;
+    }
+
+    .footer_base{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .footer_base_logo{
+        grid-area: 1;
+        padding: 1em 0em;
+    }
+
+    .footer_base_logo img{
+        width: 9em;
+    }
+
+    .footer_base_redes{
+        grid-area: 3;
+        justify-content: center;
+    }
+
+    .footer_base_menu_items{
+        display: flex;
+        flex-direction: column;
+        grid-area: 2;
+    }
+
+    .footer_base_menu_items_item{
+        padding: 1em 0em;
+    }
+
+    .footer_base_menu_items_item li{
+        margin: 0em 8em;
+    }
+
+    .footer_base_redes{
+        padding: 1em 0em;
+    }
+
+    .footer_base_copyright{
+        padding: 0em;
+        text-align: center;
+    }
+}
